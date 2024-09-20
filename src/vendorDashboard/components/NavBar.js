@@ -1,24 +1,29 @@
-import React from 'react'
+import React from 'react';
 
-const NavBar = ({showLogin,showRegistration,logout,logoutHandler}) => {
-  const firmName = localStorage.getItem("firmName")
+const NavBar = ({ showLogin, showRegistration, logout, logoutHandler }) => {
+  const firmName = localStorage.getItem('firmName');
+  
   return (
-    <div className='navSection'>
+    <nav className='nav-section'>
       <div className='company'>
-         Vendor Dashboard
+        <h2>Vendor Dashboard</h2>
       </div>
-      <div className='firmName'>
-        <h4>FirmName : {firmName}</h4>
+      <div className='firm-name'>
+        <h4>Firm Name: {firmName}</h4>
       </div>
-      <div className='userAuth'>
-        {!logout ? <>
-         <span onClick={showLogin}>Login / </span>  
-         <span onClick={showRegistration}>Register</span> 
-         </> : <span onClick={logoutHandler}>Logout</span> }
-              
+      <div className='user-auth'>
+        {!logout ? (
+          <>
+            <span className='auth-link' onClick={showLogin}>Login</span>
+            <span className='divider'>/</span>
+            <span className='auth-link' onClick={showRegistration}>Register</span>
+          </>
+        ) : (
+          <span className='auth-link' onClick={logoutHandler}>Logout</span>
+        )}
       </div>
-    </div>
-  )
-}
+    </nav>
+  );
+};
 
-export default NavBar
+export default NavBar;
