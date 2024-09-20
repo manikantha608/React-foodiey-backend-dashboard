@@ -143,7 +143,7 @@ const LandingPage = () => {
   const [product, setProduct] = useState(false);
   const [welcome, setWelcome] = useState(false);
   const [allProducts, setAllProducts] = useState(false);
-  const [logout, setLogout] = useState(true);
+  const [logout, setLogout] = useState(false);
   const [showFirmTitle, setShowFirmTitle] = useState(true);
 
   useEffect(() => {

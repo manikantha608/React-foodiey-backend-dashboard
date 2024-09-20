@@ -38,7 +38,7 @@ const Login = ({ showWelcome }) => {
         // window.location.reload();
        
       }
-      // showWelcome();
+
     } catch(err) {
       console.error(err.message);
       alert('Login failed');
